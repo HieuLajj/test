@@ -29,7 +29,7 @@ public class Projectile : MonoBehaviour
         while(sampleTime<=1f){
             sampleTime += Time.deltaTime * speed;
             transform.position = Vector3.Lerp(transform.position,curve.evaluate(sampleTime), Time.deltaTime*10);
-            transform.forward = curve.evaluate(sampleTime + 0.001f) - transform.position;
+           // transform.forward = curve.evaluate(sampleTime + 0.001f) - transform.position;
             yield return null;
         }
     }
